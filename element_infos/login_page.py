@@ -1,11 +1,9 @@
 
 from common.base_page import BasePage
 from common.set_driver import set_driver
-from common.element_data_utils import ElementDataUtils
 from common.conf_utils import conf
-from common.element_yaml_utils import ElementYamlData
+from common.element_yaml_utils import read_yaml
 
-elemenets = ElementYamlData('login_page').read_yaml()
 
 
 class LoginPage(BasePage):
@@ -27,7 +25,7 @@ class LoginPage(BasePage):
         #                           'locator_type': 'xpath',
         #                           'locator_value':'//input[@name="keepLogin[]"]',
         #                           'timeout': 2}
-        # elemenets = ElementDataUtils('项目').get_element_info('login_page')
+        elemenets = read_yaml('login_page')
         self.username_inputbox = elemenets['username_inputbox']
         self.password_inputbox = elemenets['password_inputbox']
         self.login_button = elemenets['login_button']

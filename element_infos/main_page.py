@@ -1,13 +1,13 @@
 from element_infos.login_page import LoginPage
-from common.element_data_utils import ElementDataUtils
 from common.base_page import BasePage
 from common.conf_utils import conf
 from common.set_driver import set_driver
+from common.element_yaml_utils import read_yaml
 
 class MainPage(BasePage):
     def __init__(self,driver):
        super().__init__(driver)
-       element = ElementDataUtils('项目').get_element_info('main_page')
+       element = read_yaml('main_page')
        self.companyname_showbox = element['companyname_showbox']
        self.myzone_menu = element['myzone_menu']
        self.product_menu = element['product_menu']
