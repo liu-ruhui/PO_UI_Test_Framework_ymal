@@ -1,0 +1,50 @@
+login_page :
+  username_inputbox:
+    element_name: '用户名输入框'
+    locator_type: 'xpath'
+    locator_value: '//input[@name="account"]'
+    timeout: 3
+
+  password_inputbox:
+    element_name: '密码输入框'
+    locator_type: 'xpath'
+    locator_value: '//input[@name="password"]'
+    timeout: 3
+
+  login_button:
+    element_name: '登录按钮'
+    locator_type: 'xpath'
+    locator_value: '//button[@id="submit"]'
+    timeout: 3
+
+  keeplogin_checkbox:
+    element_name: '复选框：记住密码'
+    locator_type: 'xpath'
+    locator_value: '//input[@name="keepLogin[]"]'
+    timeout: 2
+
+main_page:
+  company_show_box:
+    element_name: '公司名称'
+    locator_type: 'xpath'
+    locator_value: '//h1[@id="companyname"]'
+    timeout: 3
+
+  my_zone_menu:
+    element_name: '我的地盘'
+    locator_type: 'xpath'
+    locator_value: '//li[@data-id="my"]'
+    timeout: 3
+
+  product_menu :
+    element_name: '项目'
+    locator_type: 'xpath'
+    locator_value: '//li[@data-id="product"]'
+    timeout: 3
+
+  username_show_span:
+    element_name: '用户名称'
+    locator_type: 'xpath'
+    locator_value: '//span[@class="user-name"]'
+    timeout: 3
+
